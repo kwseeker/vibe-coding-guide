@@ -31,6 +31,9 @@ openspec-cn init
 **OpenSpec 开发流程**：
 1. 首先使用 `openspec init` 生成初始规范文档；
 2. 手动填写 `openspec/project.md` 完善项目上下文说明；
+	如果项目不是从0开始的（即已有代码结构配置），也可以让 Agent 帮忙完善，比如：
+	“请阅读 openspec/project.md 并帮我填写有关我的项目、技术堆栈和约定的详细信息”。
+	这个文件内容不太可能一开始就规划地很详细，可以随着迭代不断完善。
 3. 每次添加新需求（每个需求一个规范目录），先执行 `/openspec:proposal` 创建提案、规范和计划任务列表；
 4. 评审 OpenSpec 生成的提案和规范并修改；
 5. 评审完毕后执行 `/openspec:apply` 修改代码实现计划任务并更新任务列表状态；
@@ -39,4 +42,5 @@ openspec-cn init
 **参考**：
 - [OpenSpec vs Spec Kit：为您的团队选择正确的 AI 驱动开发工作流程](https://hashrocket.com/blog/posts/openspec-vs-spec-kit-choosing-the-right-ai-driven-development-workflow-for-your-team#installation-a-developer-friendly-start)
 - [From Spec to Shipping: How Developers Implement Features with AI-Driven Workflows](https://hashrocket.com/blog/posts/from-spec-to-shipping-how-developers-implement-features-with-ai-driven-workflows)
-
+- [从1到N的开发神器OpenSpec规范驱动开发完整实战指南](https://www.aivi.fyi//llms/introduce-OpenSpec)
++ [openspec的project.md要求模板](https://www.cnblogs.com/llcdbk/p/19446752 "发布于 2026-01-06 11:58")
