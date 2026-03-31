@@ -24,7 +24,7 @@ claude --dangerously-skip-permissions
 	- `claude analyze`  
 	    分析项目结构并给出改进建议
 	- `claude debug <file>`  
-    分析并定位代码问题
+	    分析并定位代码问题
 	- `claude review`  
 	    代码审查（安全、性能、bug）
 - Skill（技能）管理
