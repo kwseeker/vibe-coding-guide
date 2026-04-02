@@ -63,6 +63,11 @@ lms load qwen/qwen3.5-9b -c 32768
 	- LM Studio 接入 Claude Code 模型崩溃
 		默认加载的模型上下文设置是4K，而 Claude Code 启动时就往模型中塞了 18K 的提示词导致模型上下文被撑爆。
 
+- **对接到 `OpenClaw`**
+	`openclaw onboard` 中选择 `Custom Provider`，设置模型 API Base URL： http://192.168.8.108:1234/v1 ，设置 API KEY（如果 LMStudio 没有设置 API KEY，就随便填但是不能设置为空，不要被配置向导误导，否则后面会报错），
+	设置 `Endpoint compatibility`: OpenAI-compatible；然后选择本地模型ID。
+	测试联通性：`openclaw doctor`。
+
 ## 开放接口
 
 支持三种API：

@@ -46,7 +46,9 @@ TODO。
 
 - [PinchBench](https://pinchbench.com/)（养虾模型排行）
 	- [gemini-3-flash-preview](https://ofox.ai/zh/models/google/gemini-3-flash-preview)
-
+- LM Studio
+	`openclaw onboard` 中选择 `Custom Provider`，设置模型 API Base URL： http://192.168.8.108:1234/v1 ，设置 API KEY（如果 LMStudio 没有设置 API KEY，就随便填但是不能设置为空，不要被配置向导误导，否则后面会报错），设置 `Endpoint compatibility`: OpenAI-compatible；然后选择本地模型ID。
+	测试联通性：`openclaw doctor`。
 ## 详细配置
 
 - [OpenClaw 模型配置完全教程：从零开始到高级玩法（2026）](https://ofox.ai/zh/blog/openclaw-model-configuration-complete-guide-2026/)
@@ -69,4 +71,12 @@ openclaw onboard
 
 ```sh
 openclaw -h
+
+openclaw gateway status
+openclaw gateway start
+openclaw gateway start --daemon
+openclaw gateway stop
+
+# 单独修改某个配置
+openclaw config
 ```
