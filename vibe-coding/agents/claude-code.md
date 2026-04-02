@@ -5,7 +5,9 @@
 claude --dangerously-skip-permissions
 ```
 
- **常用命令**：
+## 常用命令
+- 斜杠命令
+	- /init
 - 基础命令
 	- `claude`  
 		启动 Claude Code 交互式终端
