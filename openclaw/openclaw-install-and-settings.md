@@ -79,4 +79,6 @@ openclaw gateway stop
 
 # 单独修改某个配置
 openclaw config
+
+openclaw tui
 ```

@@ -25,7 +25,7 @@ curl http://192.168.8.108:1234/v1/models
 lms ps
 # 查看磁盘上可用的模型列表
 lms ls
-# 加载模型 -c/--context-length 指定最大上下文
+# 加载模型 -c/--context-length 指定最大上下文，上下文越大模型响应速度会越慢
 lms load qwen/qwen3.5-9b -c 32768
 ```
 
@@ -43,6 +43,10 @@ lms load qwen/qwen3.5-9b -c 32768
 	默认空闲 60 分钟后会被卸载。
 
 ## 对接 Agent
+
+经测试，MacMini (M4 16GB) 通过 LM Studio 跑本地模型，基本无法支持 Claude Code 和 OpenClaw。
+Claude Code 刚接入就会往 LLM 上下文塞入大概 18K 的 token，OpenClaw 则是大概 10K 的token； 
+加载大模型选用更大的上下文，则处理速度会变慢甚至超时，如果选用较小的上下文则可能直接被撑爆进而模型崩溃。
 
 - **对接到 `CherryStudio`**
 	`配置 -> 模型服务 -> LM Studio -> 修改API地址 和 API密钥（有设置的话）-> 搜索模型列表并添加`。
