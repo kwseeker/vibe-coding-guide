@@ -14,7 +14,7 @@ openclaw --version
 ~/.nvm/versions/node/v24.14.1/bin/openclaw
 ~/.nvm/versions/node/v24.14.1/lib/node_modules/openclaw
 #配置文件目录
-~/.openclaw
+~/.openclaw (2026.3.28)
 	├── config.yaml          # 全局配置（核心）
 	├── models.yaml          # 模型定义（所有可用模型）
 	├── agents/              # Agent 角色配置
@@ -25,6 +25,19 @@ openclaw --version
 	├── plugins/             # 插件配置
 	├── .env                 # 环境变量（可选）
 	└── logs/                # 运行日志
+	├── agents
+	
+	├── canvas               # 
+	├── credentials          # 
+	├── cron                 # 
+	├── devices              # 
+	├── exec-approvals.json  #
+	├── identity             #
+	├── logs                 # 
+	├── openclaw.json        # 核心配置文件
+	├── telegram             #
+	├── update-check.json    #
+	└── workspace            #
 ```
 多 OpenClaw 实例安装：
 TODO。

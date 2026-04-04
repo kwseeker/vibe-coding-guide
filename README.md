@@ -4,6 +4,9 @@ AI知识总结。
 
 包括：
 + ai-agents（AI Agent 开发流程、框架、原理、驾驭工程）
++ ai-engineering（AI 工程化思想）
++ ai-image-video-gen（AI 图片视频生成工具）
++ ai-skills（一些Skills）
 - ai-tools（常用AI工具：爬虫等）
 - lmstudio（本地部署大模型、对接到各种Agent工具）
 - openclaw（openclaw 深入研究）
