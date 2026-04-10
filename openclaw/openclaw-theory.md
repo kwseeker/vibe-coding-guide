@@ -128,7 +128,7 @@
 		- **OpenClaw Protocol 路由**（任务处理主要看这个路由，支持Request-Response、Event Streaming 通信模式，通过`attachGatewayWsHandlers()`注册）
 			- **Methods**（消息入口）
 				1. 会话与对话处理 (Chat & Sessions)
-					**agent / chat.send**（**最核心的入口命令**）: 向 Agent 发送消息并开始对话流。
+					**agent / chat.send**（**最核心的入口命令**）: **向 Agent 发送消息并开始对话流**。
 					sessions.list / sessions.history: 获取当前的活动会话或历史消息。
 					sessions.subscribe: 订阅特定会话的实时消息更新（如打字机效果输出）。
 					chat.abort / sessions.abort: 强制停止正在运行的 Agent 推理。
@@ -188,12 +188,12 @@
 		- 是 agent 命令的简化版本，主要用于普通的聊天场景，它共享了大部分会话管理和指令解析逻辑，最后同样收敛到 agentCommandFromIngress。
 6. **agentCommandFromIngress 核心处理流程**（内部流程依然比较复杂）
 	1. **预处理与环境准备**
-		- 消息增强: 向用户消息中注入时间戳、内部事件上下文（Internal Events）等，帮助模型理解当前的时间和状态。
+		- 消息增强: **向用户消息中注入时间戳、内部事件上下文（Internal Events）等，帮助模型理解当前的时间和状态**。
 		- 配置与密钥加载: 通过网关安全地解析 `openclaw.json` 中的 API 密钥（Secrets），确保运行时不泄露敏感信息。
 		- Agent 身份校验: 验证指定的 `agentId` 是否存在。
 		- 会话解析 (`resolveSession`):
 		    - 如果是新请求，创建新的 `sessionId`。
-		    - 如果是已有会话，根据 `sessionKey` 加载历史上下文（Token 使用量、状态等）。
+		    - 如果是已有会话，**根据 `sessionKey` 加载历史上下文（Token 使用量、状态等）**。
 		- 工作空间准备: 确保对应的 Agent 工作目录存在，并初始化必要的 `bootstrap` 文件（如模型需要的环境配置文件）。
 	2. **ACP/标准模式分支**
 		检查当前会话是否连接了 **ACP (Agent Client Protocol)**（例如正在使用 Zed 编辑器）：
@@ -207,7 +207,7 @@
 	4. **具体的Agent运行器**
 		根据 Provider 的不同，它会选择不同的底层实现：
 		- CLI Provider: 如果配置使用的是 `claude-cli` 这种外部命令行工具，它会通过 `runCliAgent` 派生子进程执行。
-		- **Embedded Provider**: 这是最常用的模式，调用内置的 **PI Agent 引擎** (入口`runEmbeddedPiAgent`)
+		- **Embedded Provider**: 这是最常用的模式，调用内置的 **PI Agent 引擎 (入口`runEmbeddedPiAgent`)**
 		    引擎实现位于：`src/agents/pi-embedded-runner`，代码量 2.7W行
 			这个引擎负责：
 		    - 管理 LLM 流式输出。
@@ -217,7 +217,10 @@
 		- **结果外发 (`deliverAgentCommandResult`)**: 如果请求中开启了 `deliver: true`，执行结果会自动发送到对应的外部 Channel（如推送给你的 Telegram 或 Discord）。
 		- **状态同步**: 运行结束后，更新本轮对话产生的 Token 消耗、费用统计，并持久化到本地 Session 数据库。
 		- **生命周期通知**: 发送 `lifecycle: end` 事件，通知前端（手机端、Web 端）任务已完成。
-7. **PI Agent 引擎工作原理**
+7. **PI Agent 引擎工作原理** (最最核心的代码，截止202603 2.7W 行代码)
+	（入口： src/agents/pi-embedded-runner/run.ts, runEmbeddedPiAgent）
+		
+
 
 
 ## 任务处理流程

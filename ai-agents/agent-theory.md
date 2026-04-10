@@ -1,6 +1,8 @@
 
 # AI Agent 工作原理
 
+Agent 从实现角度看本质是对 LLM 有限上下文空间的精细管理。
+
 参考：
 + [AI Agent 工作原理](https://www.runoob.com/ai-agent/ai-agent-working-principle.html)
 
