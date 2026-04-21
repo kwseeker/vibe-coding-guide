@@ -2,6 +2,7 @@
 
 参考：
 - [你需要从 claw-code 仓库中学到什么](https://x.com/realsigridjin/status/2039472968624185713)
+- [一人抵一个开发团队！OpenCode最强插件Oh My OpenCode让你拥有GPT 5.2+Gemini 3 Pro+Claude Opus 4.5组合](https://www.bilibili.com/video/BV1SYrTBMEzB/?spm_id_from=333.788.recommend_more_video.0&trackid=web_related_0.router-related-2479604-9xr68.1775811443447.226&vd_source=e085f6b3e74d1e9c35fe18734cac42f7)
 
 **应该专注于设计代理系统并设置它们之间的协调**。
 
@@ -16,7 +17,7 @@
 - [`clawhip`]()
 - [`oh-my-openagent`](https://github.com/code-yeongyu/oh-my-openagent)
 	给 OpenCode 专用的多 Agent 编排层插件。
-- [oh-my-claudecode](https://github.com/Yeachan-Heo/oh-my-claudecode)
+- [oh-my-claudecode](https://github.com/Yeachan-Heo/oh-my-claudecode) 
 	给 Claude Code 专用的多 Agent 编排层插件。
 
 ## 系统架构
