@@ -2,6 +2,7 @@
 
 理论参考(实战的文档很少)：
 - [Harness Engineering 最佳实践：从概念到落地的完整操作手册](https://zhuanlan.zhihu.com/p/2023068557592863537)
+- [Harness Engineering：当人类不再写代码，软件工程反而更"工程"了](https://www.cnblogs.com/informatics/p/19740439)
 - [一文讲透如何构建Harness——六大组件全解析](https://cloud.tencent.com/developer/article/2648873)
 
 ## 个人网站项目驾驭工程实战

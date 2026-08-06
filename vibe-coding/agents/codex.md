@@ -1,6 +1,7 @@
 # Codex
 
 入门参考：
+- [Codex 教程](https://www.runoob.com/codex/codex-tutorial.html)
 - [Codex Full Course 2026: The NEW Best AI Coding Tool](https://www.youtube.com/watch?v=KXIdYEdOPys)
 
 ## 常用内容
@@ -22,3 +23,4 @@
 	审查当前代码修改，参考[Build Code Review with the Codex SDK](https://developers.openai.com/cookbook/examples/codex/build_code_review_with_codex_sdk?utm_source=chatgpt.com)。
 - 支持自定义命令
 	创建 `~/.codex/prompts/<cmd-name>.md` 文件，填写提示词说明命令的功能和流程，内部可以使用参数占位符 `$<n>`。
+- $ 可弹窗展示可调用的 Skills 列表
